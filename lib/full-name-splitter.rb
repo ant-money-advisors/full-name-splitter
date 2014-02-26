@@ -14,10 +14,12 @@ module FullNameSplitter
 
   INVALID_CHAR_REGEXP = /[^A-Za-z.\-\'\s\,]+/
 
+  MIDDLE_INITIAL_REGEXP = /[[:alpha:]]/
+
   class Splitter
     
     def initialize(full_name)
-      @full_name  = full_name
+      @full_name  = full_name.to_s.strip.gsub(/\s+/, ' ')
       @first_name = []
       @middle_name = []
       @last_name  = []
@@ -65,6 +67,13 @@ module FullNameSplitter
         @first_name = first_word
       end
 
+      # Set middle initial to the first alphabetical character found
+      @middle_initial = (MIDDLE_INITIAL_REGEXP =~ middle_name) ? $& : ''
+
+    end
+
+    def full_name
+      @full_name.empty? ? nil : @full_name
     end
 
     def first_name
@@ -73,6 +82,10 @@ module FullNameSplitter
 
     def middle_name
       @middle_name.empty? ? nil : @middle_name.join(' ')
+    end
+
+    def middle_initial
+      @middle_initial.empty? ? nil : @middle_initial
     end
 
     def last_name
@@ -132,7 +145,7 @@ module FullNameSplitter
   end
   
   def full_name
-    [first_name, middle_name, last_name].compact.join(' ')
+    [first_name, middle_name, last_name].compact.join(' ').squeeze(' ')
   end
   
   def full_name=(name)
@@ -142,12 +155,23 @@ module FullNameSplitter
   private 
   
   def split(name)
-    name = name.to_s.strip.gsub(/\s+/, ' ')
-
     splitter = Splitter.new(name)
-    [splitter.first_name, splitter.middle_name, splitter.last_name, splitter.prefix, splitter.suffix]
+    [splitter.first_name, splitter.middle_name, splitter.last_name]
+  end
 
+  def parse(name)
+    splitter = Splitter.new(name)
+    
+    {
+      :prefix => splitter.prefix,
+      :full_name => splitter.full_name,
+      :first_name => splitter.first_name,
+      :middle_name => splitter.middle_name,
+      :middle_initial => splitter.middle_initial,
+      :last_name => splitter.last_name,
+      :suffix => splitter.suffix
+    }
   end
   
-  module_function :split
+  module_function :split, :parse
 end
