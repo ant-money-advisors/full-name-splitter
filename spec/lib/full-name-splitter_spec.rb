@@ -29,6 +29,7 @@ describe Incognito do
     {
       "John Smith"                    => ["John",     nil,        "Smith"              ,nil   ,nil, nil   ],
       "Kevin Smith II"                => ["Kevin",    nil,        "Smith"              ,nil,   "II", nil  ],
+      "Kevin Smith XIX"               => ["Kevin",    nil,        "Smith"              ,nil,   "XIX", nil  ],
       "Kevin J. O'Connor"             => ["Kevin",    "J.",      "O'Connor"            ,nil   ,nil, 'J'   ],
       "Gabriel Van Helsing"           => ["Gabriel",  nil,      "Van Helsing"          ,nil   ,nil, nil   ],
       "Pierre de Montesquiou"         => ["Pierre",   nil,      "de Montesquiou"       ,nil   ,nil, nil   ],
