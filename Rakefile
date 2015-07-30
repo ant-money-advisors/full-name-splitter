@@ -1,5 +1,8 @@
 require "rubygems"
+require 'geminabox/rake'
 require "rspec/core/rake_task"
+
+Geminabox::Rake.install :dir => './', :host => 'http://gems.spokeo.com'
 
 task :default => :spec
 
