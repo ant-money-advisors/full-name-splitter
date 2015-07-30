@@ -49,7 +49,7 @@ module FullNameSplitter
       end
 
       while @unit = @units.shift do
-        if last_name_prefix? or with_apostrophe? or (first_name? and last_unit? and not initial?)
+        if last_name_prefix? or (with_apostrophe? and (@units.length == 0 or first_name?)) or (first_name? and last_unit? and not initial?)
           @last_name << @unit and break
         else
           @first_name << @unit

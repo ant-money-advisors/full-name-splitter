@@ -27,6 +27,7 @@ describe Incognito do
     # "First Middle Last"             => ["First",    "Middle",   "Last",              , "Prefix", "Suffix", "Middle Initial"]
 
     {
+      "Jim's Mother"                  => ["Jim's", nil, "Mother", nil, nil, nil],
       "John Smith"                    => ["John",     nil,        "Smith"              ,nil   ,nil, nil   ],
       "Kevin Smith II"                => ["Kevin",    nil,        "Smith"              ,nil,   "II", nil  ],
       "Kevin Smith XIX"               => ["Kevin",    nil,        "Smith"              ,nil,   "XIX", nil  ],

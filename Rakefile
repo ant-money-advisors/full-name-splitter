@@ -1,10 +1,10 @@
 require "rubygems"
-require "spec/rake/spectask"
+require "rspec/core/rake_task"
 
 task :default => :spec
 
 desc "Run all specification examples"
-Spec::Rake::SpecTask.new do |t|
+RSpec::Core::RakeTask.new do |t|
   t.spec_opts = ['--options', "spec/spec.opts"]
   t.spec_files = FileList['spec/**/*_spec.rb']
 end
