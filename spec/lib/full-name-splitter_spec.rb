@@ -27,6 +27,7 @@ describe Incognito do
     # "First Middle Last"             => ["First",    "Middle",   "Last",              , "Prefix", "Suffix", "Middle Initial"]
 
     {
+      "Ben Franklin"                  => ["Ben", nil, "Franklin", nil, nil, nil],
       "Jim's Mother"                  => ["Jim's", nil, "Mother", nil, nil, nil],
       "John Smith"                    => ["John",     nil,        "Smith"              ,nil   ,nil, nil   ],
       "Kevin Smith II"                => ["Kevin",    nil,        "Smith"              ,nil,   "II", nil  ],
@@ -35,7 +36,7 @@ describe Incognito do
       "Gabriel Van Helsing"           => ["Gabriel",  nil,      "Van Helsing"          ,nil   ,nil, nil   ],
       "Pierre de Montesquiou"         => ["Pierre",   nil,      "de Montesquiou"       ,nil   ,nil, nil   ],
       "Charles d'Artagnan"            => ["Charles",  nil,      "d'Artagnan"           ,nil   ,nil, nil   ],
-      "Jaazaniah ben Shaphan"         => ["Jaazaniah", nil,     "ben Shaphan"          ,nil   ,nil, nil   ],
+      "Jaazaniah ter Shaphan"         => ["Jaazaniah", nil,     "ter Shaphan"          ,nil   ,nil, nil   ],
       "Noda' bi-Yehudah"              => ["Noda'",    nil,      "bi-Yehudah"           ,nil   ,nil, nil   ],
       "Maria del Carmen Menendez"     => ["Maria",    nil,      "del Carmen Menendez"  ,nil   ,nil, nil   ],
       "Alessandro Del Piero"          => ["Alessandro",  nil,   "Del Piero"            ,nil   ,nil, nil   ],

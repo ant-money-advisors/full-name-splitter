@@ -11,7 +11,7 @@ module FullNameSplitter
                    "xvi", "xvii", "xviii", "xix", "xx", "xxi", "xxii", "xxiii", "xxiv", "xxv", "xxvi", "xxvii", "xxviii", "xxix", "xxx"]
 
   # last_name prefixes with different culture
-  LAST_NAME_PREFIXES = %w(de da la du del dei vda. dello della degli delle van von der den heer ten ter vande vanden vander voor ver aan mc ben).freeze
+  LAST_NAME_PREFIXES = %w(de da la du del dei vda. dello della degli delle van von der den heer ten ter vande vanden vander voor ver aan mc).freeze
 
   INVALID_CHAR_REGEXP = /[^A-Za-z.\-\'\s\,]+/
 
