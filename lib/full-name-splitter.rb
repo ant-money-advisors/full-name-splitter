@@ -7,7 +7,7 @@ module FullNameSplitter
                    "mr.", "ms.", "miss.", "mrs.", "dr.", "sir.", "phd.", "prof.", "gen.", "rep.", "st."]
 
   # suffixes
-  NAME_SUFFIXES = ["jr", "jr.", "sr", "sr.", "phd", "phd.", "md", "md.", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x", "xi", "xii", "xiii", "xiv", "xv",
+  NAME_SUFFIXES = ["jr", "jr.", "sr", "sr.", "phd", "phd.", "md", "md.", "i", "ii", "iii", "iv", "v", "vi", "vii", "viii", "ix", "x", "xi", "xii", "xiii", "xiv", "xv",
                    "xvi", "xvii", "xviii", "xix", "xx", "xxi", "xxii", "xxiii", "xxiv", "xxv", "xxvi", "xxvii", "xxviii", "xxix", "xxx"]
 
   # last_name prefixes with different culture
