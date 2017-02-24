@@ -48,13 +48,13 @@ describe Incognito do
       "John Quincy Adams"             => ["John", "Quincy",  "Adams"                ,nil   ,nil, 'Q'   ],
 
       "John Quincy"                   => ["John",     nil,      "Quincy"               ,nil   ,nil, nil   ],
-      "George H. W."                  => ["George",   "H. W.",   nil                    ,nil   ,nil, 'H'   ],
+      "George H. W."                  => ["George",   "H.",   "W."                    ,nil   ,nil, 'H'   ],
       "Van Helsing"                   => [nil,       nil,       "Van Helsing"          ,nil   ,nil, nil   ],
       "d'Artagnan"                    => [nil,       nil,       "d'Artagnan"           ,nil   ,nil, nil   ],
       "O'Connor"                      => [nil,       nil,       "O'Connor"             ,nil   ,nil, nil   ],
 
       "George"                        => ["George",    nil,     nil                    ,nil   ,nil, nil   ],
-      "Kevin J. "                     => ["Kevin",    "J.",   nil                    ,nil   ,nil, 'J'   ],
+      "Kevin J. "                     => ["Kevin",    nil,   "J."                    ,nil   ,nil, nil   ],
 
       "Thomas G. Della Fave"          => ["Thomas",   "G.",   "Della Fave"           ,nil   ,nil, 'G'   ],
       "Anne du Bourg"                 => ["Anne",     nil,      "du Bourg"             ,nil   ,nil, nil   ],
