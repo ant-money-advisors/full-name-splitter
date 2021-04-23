@@ -31,17 +31,8 @@ Gem::Specification.new do |s|
     "spec/spec.opts",
     "spec/spec_helper.rb"
   ]
-  s.homepage = "http://github.com/pahanix/full-name-splitter"
+  s.homepage = "http://github.com/Spokeo/full-name-splitter"
   s.rubygems_version = "2.4.6"
   s.summary = "FullNameSplitter splits full name into first and last name considering name prefixes and initials"
-
-  if s.respond_to?(:metadata)
-    # This is required so github knows what repo to associate with them gem
-    # otherwise the repo has to be the same name as the gem
-    s.metadata["github_repo"] = "https://github.com/Spokeo/full-name-splitter"
-  else
-    raise "RubyGems 2.0 or newer is required"
-  end
-
 end
 
