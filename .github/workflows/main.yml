@@ -10,25 +10,25 @@ on:
     types: [created]
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    if: github.event_name != 'release'
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+  # test:
+  #   runs-on: ubuntu-latest
+  #   if: github.event_name != 'release'
+  #   steps:
+  #     - name: Checkout
+  #       uses: actions/checkout@v2
 
-      - name: Install Ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          bundler-cache: true
+  #     - name: Install Ruby
+  #       uses: ruby/setup-ruby@v1
+  #       with:
+  #         bundler-cache: true
 
-      - name: Run tests
-        run: |
-          bundle exec rspec
+  #     - name: Run tests
+  #       run: |
+  #         bundle exec rspec
 
   build:
     runs-on: ubuntu-latest
-    # if: github.event_name == 'release'
+    if: github.event_name == 'release'
     steps:
       - uses: actions/checkout@v1
 
